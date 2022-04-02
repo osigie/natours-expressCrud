@@ -12,9 +12,6 @@ const express = require('express');
 const router = express.Router();
 
 
-// router.param("id", (req, res, next, value) => {
-//     console.log(`this is id ${value}`)
-// })
 
 router.param("id", checkId);
 

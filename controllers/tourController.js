@@ -56,10 +56,10 @@ const createTours = (req, res) => {
 };
 
 const getTour = (req, res) => {
-  // console.log(req.requestTime)
+
   const id = req.params.id * 1;
   const tour = tours.find((el) => el.id === id);
-  // if (tour) {
+
   res.status(200).json({
     requestedAt: req.requestTime,
     status: 'succes',
@@ -67,23 +67,11 @@ const getTour = (req, res) => {
       tour,
     },
   });
-  // } else {
-  //   res.status(404).json({
-  //     staus: 'fail',
-  //     message: 'invalid ID',
-  //   });
-  // }
+
 };
 
 const updateTour = (req, res) => {
-  // const tour = tours.find(el=> el.id === id);
-  // const id = req.params.id * 1;
-  // if (id > tours.length) {
-  //   res.status(404).json({
-  //     staus: 'fail',
-  //     message: 'invalid ID',
-  //   });
-  // } else {
+
   res.status(201).json({
     status: 'succes',
     data: {
@@ -94,14 +82,7 @@ const updateTour = (req, res) => {
 };
 
 const deleteTour = (req, res) => {
-  // const tour = tours.find(el=> el.id === id);
-  // const id = req.params.id * 1;
-  // if (id > tours.length) {
-  //   res.status(404).json({
-  //     staus: 'fail',
-  //     message: 'invalid ID',
-  //   });
-  // } else {
+ 
   res.status(204).json({
     status: 'succes',
     data: {
